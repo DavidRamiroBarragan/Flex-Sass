@@ -1,0 +1,41 @@
+@import 'variables';
+
+@mixin boton($color) {
+    display: block;
+    background-color: $color;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $blanco;
+}
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+@mixin bacground-img($imagen) {
+     background-image: url($imagen);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+//media-query
+@mixin telefono{
+    @media only screen and (min-width: #{$telefono}){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (min-width: #{$tablet}){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media only screen and (min-width: #{$desktop}){
+        @content;
+    }
+}
